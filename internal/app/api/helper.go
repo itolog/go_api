@@ -13,3 +13,9 @@ func (a *API) configureLoggerField() error {
 
 	return nil
 }
+
+// func (a *API) configureAppField() {
+// 	a.app.Get("/", func(c *fiber.Ctx) error {
+// 		return c.SendString("Hello Fiber!!")
+// 	})
+// }
