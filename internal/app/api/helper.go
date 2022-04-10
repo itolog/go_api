@@ -1,6 +1,12 @@
 package api
 
 import (
+	"encoding/json"
+	"fmt"
+	"io/ioutil"
+	"log"
+
+	"github.com/gofiber/fiber/v2"
 	"github.com/sirupsen/logrus"
 )
 
@@ -14,8 +20,19 @@ func (a *API) configureLoggerField() error {
 	return nil
 }
 
-// func (a *API) configureAppField() {
-// 	a.app.Get("/", func(c *fiber.Ctx) error {
-// 		return c.SendString("Hello Fiber!!")
-// 	})
-// }
+func (a *API) configureAppField() {
+	a.app.Get("/json", func(c *fiber.Ctx) error {
+		jsonFile, err := ioutil.ReadFile("assets/fake.json")
+		if err != nil {
+			fmt.Println(err)
+		}
+		var books Books
+
+		jerr := json.Unmarshal(jsonFile, &books)
+		if jerr != nil {
+			log.Println(jerr)
+		}
+
+		return c.JSON(books)
+	})
+}

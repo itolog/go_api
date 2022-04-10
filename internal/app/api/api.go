@@ -19,15 +19,21 @@ func New(config *Config) *API {
 	}
 }
 
+type Books struct {
+	Book []Book `json:"books"`
+}
+
+type Book struct {
+	Id   int    `json:"id"`
+	Name string `json:"name"`
+}
+
 func (api *API) Start() error {
 	if err := api.configureLoggerField(); err != nil {
 		return err
 	}
 
-	api.logger.Info("server started on port", api.config.Port)
+	api.configureAppField()
 
-	api.app.Get("/", func(c *fiber.Ctx) error {
-		return c.SendString("Hello World")
-	})
 	return api.app.Listen(api.config.Port)
 }
