@@ -19,15 +19,6 @@ func New(config *Config) *API {
 	}
 }
 
-type Books struct {
-	Book []Book `json:"books"`
-}
-
-type Book struct {
-	Id   int    `json:"id"`
-	Name string `json:"name"`
-}
-
 func (api *API) Start() error {
 	if err := api.configureLoggerField(); err != nil {
 		return err

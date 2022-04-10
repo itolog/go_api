@@ -26,7 +26,7 @@ func (a *API) configureAppField() {
 		if err != nil {
 			fmt.Println(err)
 		}
-		var books Books
+		var books interface{}
 
 		jerr := json.Unmarshal(jsonFile, &books)
 		if jerr != nil {
