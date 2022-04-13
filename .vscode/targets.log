@@ -1,3 +1,4 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # GNU Make 3.81
 # Copyright (C) 2006  Free Software Foundation, Inc.
 # This is free software; see the source for copying conditions.
@@ -5,8 +6,11 @@
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
+ 
+make: *** No rule to make target `all'.  Stop.
 
-# Make data base, printed on Sun Apr 10 15:58:23 2022
+
+# Make data base, printed on Wed Apr 13 20:46:17 2022
 
 # Variables
 
@@ -15,6 +19,7 @@
 # automatic
 ?F = $(notdir $?)
 # environment
+ 
 VSCODE_LOG_NATIVE = false
 # environment
 NVM_INC = /Users/home/.nvm/versions/node/v16.13.2/include/node
@@ -29,7 +34,7 @@ CURDIR := /Users/home/projects/go_proj/go_api
 # makefile
 SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"ru","availableLanguages":{"*":"ru"},"_languagePackId":"1efd7555d7584e5d83e43ad36f58bd35.ru","_translationsConfigFile":"/Users/home/Library/Application Support/Code/clp/1efd7555d7584e5d83e43ad36f58bd35.ru/tcf.json","_cacheRoot":"/Users/home/Library/Application Support/Code/clp/1efd7555d7584e5d83e43ad36f58bd35.ru","_resolvedLanguagePackCoreLocation":"/Users/home/Library/Application Support/Code/clp/1efd7555d7584e5d83e43ad36f58bd35.ru/8dfae7a5cd50421d10cd99cb873990460525a898","_corruptedFile":"/Users/home/Library/Application Support/Code/clp/1efd7555d7584e5d83e43ad36f58bd35.ru/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"ru","availableLanguages":{"*":"ru"},"_languagePackId":"1efd7555d7584e5d83e43ad36f58bd35.ru","_translationsConfigFile":"/Users/home/Library/Application Support/Code/clp/1efd7555d7584e5d83e43ad36f58bd35.ru/tcf.json","_cacheRoot":"/Users/home/Library/Application Support/Code/clp/1efd7555d7584e5d83e43ad36f58bd35.ru","_resolvedLanguagePackCoreLocation":"/Users/home/Library/Application Support/Code/clp/1efd7555d7584e5d83e43ad36f58bd35.ru/dfd34e8260c270da74b5c2d86d61aee4b6d56977","_corruptedFile":"/Users/home/Library/Application Support/Code/clp/1efd7555d7584e5d83e43ad36f58bd35.ru/corrupted.info","_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
 # makefile (from `Makefile', line 1)
@@ -43,7 +48,7 @@ __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 INFOPATH = /opt/homebrew/share/info:
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/b8/dg0fln7s4h52p_zttrmhw8700000gn/T/vscode-ipc-3474444d-f668-4978-a955-2bbce16fb1f0.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/b8/dg0fln7s4h52p_zttrmhw8700000gn/T/vscode-ipc-e9d28bb2-7a1d-485d-bddb-c8bd8b8457ec.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -63,7 +68,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.3XcEAtbQFt/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.J5QM9wXl8Z/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -83,7 +88,7 @@ HOME = /Users/home
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/home/Library/Application Support/Code/CachedData/8dfae7a5cd50421d10cd99cb873990460525a898
+VSCODE_CODE_CACHE_PATH = /Users/home/Library/Application Support/Code/CachedData/dfd34e8260c270da74b5c2d86d61aee4b6d56977
 # environment
 LOGNAME = home
 # environment
@@ -123,7 +128,7 @@ TMPDIR = /var/folders/b8/dg0fln7s4h52p_zttrmhw8700000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/home/Library/Application Support/Code/1.66.1-main.sock
+VSCODE_IPC_HOOK = /Users/home/Library/Application Support/Code/1.66.2-main.sock
 # makefile
 MAKEFLAGS = Rrqp
 # environment
@@ -163,8 +168,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 75627
+VSCODE_PID = 83645
 # variable set hash-table stats:
+ 
 # Load=77/1024=8%, Rehash=0, Collisions=2/100=2%
 
 # Pattern-specific Variable Values
@@ -173,9 +179,9 @@ VSCODE_PID = 75627
 
 # Directories
 
-# . (device 16777232, inode 13687405): 11 files, no impossibilities.
+# . (device 16777232, inode 13687405): 14 files, no impossibilities.
 
-# 11 files, no impossibilities in 1 directories.
+# 14 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -247,8 +253,6 @@ run:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sun Apr 10 15:58:23 2022
+# Finished Make data base on Wed Apr 13 20:46:17 2022
 
  
-make: *** No rule to make target `all'.  Stop.
-

@@ -6,6 +6,7 @@ import (
 	"net/http"
 
 	_ "github.com/gorilla/mux"
+	"github.com/itolog/go_api/storage"
 	"github.com/sirupsen/logrus"
 )
 
@@ -40,4 +41,13 @@ func (a *API) configureRouterField() {
 		w.Write(jsonFile)
 
 	})
+}
+
+func (a *API) configureStorageField() error {
+	storage := storage.New(a.config.Storage)
+	if err := storage.Open(); err != nil {
+		return err
+	}
+	a.storage = storage
+	return nil
 }
