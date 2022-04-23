@@ -18,6 +18,6 @@ func (a *API) configureLoggerField() error {
 func (a *API) configureAppField() {
 	a.app.Get("/json", func(c *fiber.Ctx) error {
 
-		return c.SendFile("assets/fake.json")
+		return c.SendFile("assets/fake.json", true)
 	})
 }

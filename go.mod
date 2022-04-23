@@ -4,6 +4,8 @@ go 1.18
 
 require github.com/BurntSushi/toml v1.1.0
 
+require github.com/goccy/go-json v0.9.6
+
 require (
 	github.com/andybalholm/brotli v1.0.4 // indirect
 	github.com/gofiber/fiber/v2 v2.31.0
