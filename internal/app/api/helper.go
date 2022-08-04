@@ -38,8 +38,11 @@ func (a *API) configureRouterField() {
 		}
 		w.Header().Set("Content-Type", "application/json")
 		w.WriteHeader(http.StatusOK)
-		w.Write(jsonFile)
+		_, err = w.Write(jsonFile)
 
+		if err != nil {
+			a.logger.Println(err)
+		}
 	})
 }
 
